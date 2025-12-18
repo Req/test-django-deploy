@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
+from .views import random_number
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', lambda request: HttpResponse("Hello world!"), name='root'),
+    path('api/random/', random_number, name='api-random'),
 ]
