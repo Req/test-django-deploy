@@ -22,7 +22,7 @@ from messagesapp.views import messages as messages_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', lambda request: HttpResponse("Hello world!"), name='root'),
+    path('', lambda request: HttpResponse("Hello world!!!"), name='root'),
     path('api/random/', random_number, name='api-random'),
     path('api/messages/', messages_view, name='api-messages'),
 ]
